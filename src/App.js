@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
-import {PieChart, Pie} from 'recharts';
 
-axios.defaults.xsrfCookieName = 'csrftoken'
-axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
+
 
 
 class App extends Component {
@@ -79,18 +78,7 @@ class App extends Component {
     return this.setState({ viewCompleted: false });
   };
 
-  showPiechart = () => {
-    return (
-      
-      <PieChart width={700} height={700}>
-        <Pie data={this.state.viewCompleted} dataKey="Tasks" outerRadius={250} fill="blue" />
-      </PieChart>
-      
-);
-
-    
-    
-  }
+  
 
   renderTabList = () => {
     return (
